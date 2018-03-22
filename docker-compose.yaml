@@ -1,0 +1,17 @@
+# Run with:
+#   docker-compose up
+# Then point your browser to:
+#   http://localhost:6006/
+
+version: '2'
+services:
+  tensorboard:
+    image: damianmoore/tensorflow-image-classifier
+    volumes:
+      - ./data:/data:rw
+    ports:
+      - "6006:6006"
+    command:
+      - tensorboard
+      - --logdir
+      - /data/tf_files/training_summaries

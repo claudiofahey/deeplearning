@@ -1,9 +1,8 @@
 FROM continuumio/anaconda3
 
-RUN \
-    apt-get -y install libgtk2.0 && \
-    conda install -y -c menpo opencv3
+RUN apt-get -y update && \
+    apt-get -y install libgl1-mesa-dev
 
-COPY *.py /home/
+RUN conda install -y -c conda-forge opencv
 
-WORKDIR /home
+COPY image_generator.py /usr/local/bin/

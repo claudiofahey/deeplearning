@@ -16,6 +16,10 @@ faheyc@ubuntu:~/deeplearning/tensorflow-image-classifier$
 ./classify.sh ../data/tf_files flowers ../data/tf_files/flowers/data/daisy/11124324295_503f3a0804.jpg
 ```
 
+```
+sudo apt-get install imagemagick
+```
+
 # References
 
 - <https://github.com/damianmoore/tensorflow-image-classifier>
